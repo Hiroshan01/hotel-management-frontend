@@ -1,5 +1,5 @@
-import './App.css'
-import Header from './assets/componentes/header'
+import Header from "./assets/componentes/header"
+
 
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
 
   return (
     <>
-   <Header/>
+        <Header/>
     </>
   )
 }

@@ -1,18 +1,16 @@
 import UserTag from "./userdata";
+import "./header.css";
 
 function Header(){
 
     return(
         <header>
-           <h1>This my hotel management system</h1>
-           <UserTag imageLink="https://www.google.com/url?sa=i&url=https%3A%2F%2Fpixabay.com%2Fimages%2Fsearch%2Fuser%2F&psig=AOvVaw1gSgT_HAInYcY5xdpR5h0-&ust=1729157487495000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwo
-           TCPCsvd3LkokDFQAAAAAdAAAAABAJ" name="Hiroshan" />
-           <UserTag imageLink="https://www.google.com/url?sa=i&url=https%3A%2F%2Fpixabay.com%2Fimages%2Fsearch%2Fuser%2F&psig=AOvVaw1gSgT_HAInYcY5xdpR5h0-&ust=1729157487495000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCPCsvd3LkokDFQAAAAAdAAAAABAJ" name="Hiroshan" />
-           <UserTag imageLink="https://www.google.com/url?sa=i&url=https%3A%2F%2Fpixabay.com%2Fimages%2Fsearch%2Fuser%2F&psig=AOvVaw1gSgT_HAInYcY5xdpR5h0-&ust=1729157487495000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCPCsvd3LkokDFQAAAAAdAAAAABAJ" name="Hiroshan" />
-           <UserTag imageLink="https://www.google.com/url?sa=i&url=https%3A%2F%2Fpixabay.com%2Fimages%2Fsearch%2Fuser%2F&psig=AOvVaw1gSgT_HAInYcY5xdpR5h0-&ust=1729157487495000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCPCsvd3LkokDFQAAAAAdAAAAABAJ" name="Hiroshan" />
+            <h1>React Header</h1>
+            <UserTag imageLink="https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_640.png" 
+            name="Hiroshan Madusanka"/>
+            
         </header>
-        
+    
     )
 }
-
-export default Header;
+ export default Header;
