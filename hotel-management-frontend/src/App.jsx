@@ -1,6 +1,7 @@
 import Header from "./assets/componentes/header/header.jsx"
 import './App.css'
 import './index.css'
+import HomePage from "./pages/client-page/homePage.jsx"
 
 
 function App() {
@@ -8,7 +9,9 @@ function App() {
 
   return (
     <>
-        <Header/>
+       <HomePage/>
+
+       
     </>
   )
 }
