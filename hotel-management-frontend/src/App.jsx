@@ -1,5 +1,6 @@
-import Header from "./assets/componentes/header"
-
+import Header from "./assets/componentes/header/header.jsx"
+import './App.css'
+import './index.css'
 
 
 function App() {

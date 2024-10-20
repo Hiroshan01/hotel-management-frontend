@@ -1,0 +1,6 @@
+header{
+    width: 100%;
+    background-color: lightblue;
+    display:flex;
+    position: relative;
+}
