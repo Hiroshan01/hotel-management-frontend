@@ -50,9 +50,10 @@ export default function AdminBooking() {
         </thead>
         <tbody>
           {
+            //const booking>>>
             bookings.map(
 
-
+            //index mean 1,,2,3,
             (booking , index)=>{
               
               console.log(index)
