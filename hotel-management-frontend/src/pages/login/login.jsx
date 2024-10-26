@@ -2,7 +2,8 @@ import { useState } from "react";
 import axios from "axios";
 import "./login.css";
 export default function LoginPage(){
-
+ 
+  //This is user state, which used to chnage value 
   const [email ,setEmail] = useState("")
   const [password , setPassword] = useState("")
 
@@ -16,10 +17,20 @@ export default function LoginPage(){
     ).then(
       (res)=>{
 
-      console.log(res.data)
+      
+      //save user web browser
       localStorage.setItem("token",res.data.token)
 
       const token = localStorage.getItem("token")
+     //loctate "redirect"
+
+     if(res.data.user.type=="customer"){
+      //If cutermer direct to home page
+      window.location.href="/"
+
+     }else if(res.data.user.type=="admin"){
+        window.location.href="/admin"
+     }
 
 
       console.log(token)
@@ -44,13 +55,15 @@ export default function LoginPage(){
         onChange={
 
           (e)=>{
-            setEmail(e.target.value)
+            setEmail(e.target.value) //e is current value of email
           }
 
         } />
 
 
-        <input type="password" placeholder="Enter your password" className="w-[80%] bg-[#00000000]  border-[2px]  text-white placeholder:text-white h-[50px] px-[5px] " defaultValue={password} onChange={
+        <input type="password" placeholder="Enter your password" className="w-[80%] bg-[#00000000]  border-[2px] 
+         text-white placeholder:text-white h-[50px] px-[5px] " 
+         defaultValue={password} onChange={
           (e)=>{
             setPassword(e.target.value)
           }

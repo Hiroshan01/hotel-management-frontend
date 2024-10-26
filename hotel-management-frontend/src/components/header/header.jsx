@@ -9,7 +9,7 @@ function Header(){
 
       <h1 className='text-white text-[30px]'>Leonine villa</h1>
 
-      <UserTag imageLink="https://th.bing.com/th/id/OIP.ySiQ61-170um7jHn2cv15QAAAA?rs=1&pid=ImgDetMain"  name="Malith Dilshan "/>
+      <UserTag imageLink="https://images.freeimages.com/365/images/previews/85b/psd-universal-blue-web-user-icon-53242.jpg"  name="Hiroshan Madusnaka "/>
 
     </header>
   )

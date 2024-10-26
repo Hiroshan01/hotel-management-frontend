@@ -1,6 +1,27 @@
 
-
 function UserTag(pro) {
+    
+    console.log("hi")
+    const token = localStorage.getItem("token");
+    console.log(token)
+
+    if (token != null) {
+        console.log(token);
+        console.log(import.meta.env.VITE_BACKEND_URL);
+        axios.get(import.meta.env.VITE_BACKEND_URL + "/api/users/", {
+            headers: {
+                Authorization: "Bearer " + token, 
+                "Content-Type": "application/json" ,
+            }
+        }).then((res) => {
+            console.log(res);
+        }).catch((err) => {
+            console.error("Error fetching data:", err);
+        });
+        
+    }
+    
+
     return (
         <div className="absolute right-0 flex 
      items-center">
