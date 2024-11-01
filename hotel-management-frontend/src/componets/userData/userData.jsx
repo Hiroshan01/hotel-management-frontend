@@ -20,7 +20,6 @@ function UserTag(pro) {
         });
         
     }
-    
 
     return (
         <div className="absolute right-0 flex 
