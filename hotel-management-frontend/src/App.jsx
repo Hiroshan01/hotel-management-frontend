@@ -5,6 +5,7 @@ import AdminPage from "./pages/adminpage/admin";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import TestComponent from "./components/test/test";
 import LoginPage from "./pages/login/login";
+import CategoryPage from "./pages/client-page/category";
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
         
         <Route path="/admin/*"  element={<AdminPage/>}/>
         <Route path="/login" element={<LoginPage/>}/>
+        <Route path="/category" element={<CategoryPage />} />
         <Route path="/*" element={<HomePage/>}/>
       </Routes>
 

@@ -8,6 +8,7 @@ function UserTag(pro) {
     if (token != null) {
         console.log(token);
         console.log(import.meta.env.VITE_BACKEND_URL);
+        
         axios.get(import.meta.env.VITE_BACKEND_URL + "/api/users/", {
             headers: {
                 Authorization: "Bearer " + token, 

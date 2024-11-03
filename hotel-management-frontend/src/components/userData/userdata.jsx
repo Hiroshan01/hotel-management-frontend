@@ -1,36 +1,52 @@
-import { useEffect } from "react";
 import axios from "axios";
+import { useEffect, useState } from "react";
 
 function UserTag(props) {
-  const token = localStorage.getItem("token");
+  const [name, setName] = useState("");
 
-  useEffect(() => {
-    if (token != null) {
-      console.log(token);
-      axios.get(import.meta.env.VITE_BACKEND_URL + "api/users/", {
-          headers: {
-            Authorization: "Bearer " + token, // Added space after "Bearer"
-            "Content-Type": "application/json"
-          }
-        })
-        .then((res) => {
-          console.log(res);
-        })
-        .catch((err) => {
-          console.error("Error fetching data:", err);
-        });
-    }
-  }, [token]); // Only runs when the token changes
+  const [userFound , setUserFound] = useState(false)
+
+  
+
+  //useEffect( function , []   )
+  useEffect(
+    ()=>{
+      const token = localStorage.getItem("token");
+      if (token != null) {
+        axios
+          .get(import.meta.env.VITE_BACKEND_URL + "/api/users/", {
+            headers: {
+              Authorization: "Bearer " + token,
+              "Content-Type": "application/json",
+            },
+          })
+          .then((res) => {
+            console.log(res);
+            setName(res.data.user.firstName + " " + res.data.user.lastName);  
+
+            setUserFound(true)
+          });
+      }else{
+        setName("")
+      }      
+    },[userFound]
+  );
+
 
   return (
-    <div className="absolute right-0 flex items-center cursor-pointer mr-2">
-      <img
-        className="rounded-full w-[75px] h-[75px]"
-        src={props.imageLink}
-        alt={props.name} // Added alt attribute for accessibility
-      />
-      <span className="text-white ml-[5px] text-xl">{props.name}</span>
+    <div className="absolute right-0 flex  items-center cursor-pointer mr-2">
+      <img className="rounded-full w-[75px] h-[75px]" src={props.imageLink} />
+      <span className="text-white ml-[5px] text-xl r">{name}</span>
+
+      <button onClick={()=>{
+        localStorage.removeItem("token")
+        setUserFound(false)
+      }}>
+        logout
+      </button>
     </div>
+
+
   );
 }
 
